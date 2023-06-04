@@ -5,6 +5,10 @@ export default function DiceInput({
   diceCount: number;
   handleDiceCountChange: (count: number) => void;
 }) {
+  const handleInputChange = (inputCount: number) => {
+    if (inputCount >= 0 && inputCount < 100) handleDiceCountChange(inputCount);
+  };
+
   return (
     <div className="dice-input">
       <form>
@@ -13,8 +17,10 @@ export default function DiceInput({
           type="number"
           id="diceCount"
           name="diceCount"
+          min={0}
+          max={99}
           value={diceCount}
-          onChange={(e) => handleDiceCountChange(e.target.valueAsNumber)}
+          onChange={(e) => handleInputChange(e.target.valueAsNumber)}
         />
       </form>
     </div>
