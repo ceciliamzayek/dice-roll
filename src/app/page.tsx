@@ -14,7 +14,7 @@ export default function Home(): React.JSX.Element {
   const addDice = (difference: number): void => {
     const newDice: React.JSX.Element[] = [...dice];
     for (let i: number = 0; i < difference; i++) {
-      newDice.push(<NewDie />);
+      newDice.push(<NewDie key={Math.random()} />);
     }
     setDice(newDice);
   };
@@ -27,11 +27,13 @@ export default function Home(): React.JSX.Element {
 
   return (
     <div>
-      <h1>Dice Game</h1>
-      <DiceInput
-        diceCount={dice.length}
-        handleDiceCountChange={handleDiceCountChange}
-      />
+      <div className="header">
+        <h1>Dice Game</h1>
+        <DiceInput
+          diceCount={dice.length}
+          handleDiceCountChange={handleDiceCountChange}
+        />
+      </div>
       <div className="board">{dice}</div>
     </div>
   );

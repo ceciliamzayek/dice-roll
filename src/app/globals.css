@@ -8,10 +8,23 @@ h1 {
   font-size: 36px;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+}
+
+.dice-input {
+  display: flex;
+  flex-direction: column;
+}
+
 .board {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
 }
 
 .die {
