@@ -26,14 +26,12 @@ export default function Home(): React.JSX.Element {
   };
 
   return (
-    <div>
-      <div className="header">
-        <h1>Dice Game</h1>
-        <DiceInput
-          diceCount={dice.length}
-          handleDiceCountChange={handleDiceCountChange}
-        />
-      </div>
+    <div className="page">
+      <h1>Dice Game</h1>
+      <DiceInput
+        diceCount={dice.length}
+        handleDiceCountChange={handleDiceCountChange}
+      />
       <div className="board">{dice}</div>
     </div>
   );

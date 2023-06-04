@@ -12,7 +12,9 @@ export default function DiceInput({
 
   return (
     <div className="dice-input">
-      <label>Dice Count: </label>
+      <label>
+        <h2>Dice Count</h2>
+      </label>
       <input
         type="number"
         id="diceCount"

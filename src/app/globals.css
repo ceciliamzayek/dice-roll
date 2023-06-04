@@ -8,7 +8,7 @@ h1 {
   font-size: 36px;
 }
 
-.header {
+.page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,13 +18,13 @@ h1 {
 .dice-input {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2em;
 }
 
 .board {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
+  display: inline-grid;
+  gap: 2em;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .die {
