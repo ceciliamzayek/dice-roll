@@ -6,7 +6,8 @@ export default function DiceInput({
   handleDiceCountChange: (count: number) => void;
 }) {
   const handleInputChange = (inputCount: number) => {
-    if (inputCount >= 0 && inputCount < 100) handleDiceCountChange(inputCount);
+    if (inputCount > 0 && inputCount < 100) handleDiceCountChange(inputCount);
+    else alert('Please input a number between 1 and 99');
   };
 
   return (
