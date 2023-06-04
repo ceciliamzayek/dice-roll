@@ -1,9 +1,9 @@
 export default function DiceInput({
   diceCount,
-  setDiceCount,
+  handleDiceCountChange,
 }: {
   diceCount: number;
-  setDiceCount: React.Dispatch<React.SetStateAction<number>>;
+  handleDiceCountChange: (count: number) => void;
 }) {
   return (
     <div className="dice-input">
@@ -14,7 +14,7 @@ export default function DiceInput({
           id="diceCount"
           name="diceCount"
           value={diceCount}
-          onChange={(e) => setDiceCount(e.target.valueAsNumber)}
+          onChange={(e) => handleDiceCountChange(e.target.valueAsNumber)}
         />
       </form>
     </div>
