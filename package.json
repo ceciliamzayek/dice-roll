@@ -25,5 +25,8 @@
   "engines": {
     "node": ">=18.16.0",
     "npm": "please-use-npm"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8"
   }
 }
