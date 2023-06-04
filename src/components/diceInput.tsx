@@ -12,18 +12,16 @@ export default function DiceInput({
 
   return (
     <div className="dice-input">
-      <form>
-        <label>Dice Count: </label>
-        <input
-          type="number"
-          id="diceCount"
-          name="diceCount"
-          min={0}
-          max={99}
-          value={diceCount}
-          onChange={(e) => handleInputChange(e.target.valueAsNumber)}
-        />
-      </form>
+      <label>Dice Count: </label>
+      <input
+        type="number"
+        id="diceCount"
+        name="diceCount"
+        min={0}
+        max={99}
+        value={diceCount}
+        onChange={(e) => handleInputChange(e.target.valueAsNumber)}
+      />
     </div>
   );
 }
